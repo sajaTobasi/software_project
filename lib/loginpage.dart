@@ -26,6 +26,15 @@ class LoginPage extends StatelessWidget {
   _header(context) {
     return Column(
       children: [
+        
+        const TextField(
+              decoration: InputDecoration(
+                //mainAxisAlignment: MainAxisAlignment.center
+                   // icon: AssetImage('lib/images/1.png'),
+                      icon: Image(image: AssetImage('lib/images/logo1.gif'),width: 400,height: 120,alignment: Alignment.center, )   )
+        ),
+        
+        SizedBox(height: 30),
         Text("Weeding Planner",style: TextStyle(
           fontSize: 40, 
           fontWeight: FontWeight.bold , color: const Color.fromARGB(255, 16, 111, 190) , ) )
@@ -34,10 +43,12 @@ class LoginPage extends StatelessWidget {
   }
 
   _inputField(context) {
-    return Column(
+    return Column( //Image(image: AssetImage('lib/images/1.png'))
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+       
         TextField(
+          
           decoration: InputDecoration(
               hintText: "Username",
               border: OutlineInputBorder(
@@ -66,6 +77,7 @@ class LoginPage extends StatelessWidget {
         ),
         SizedBox(height: 10),
         ElevatedButton(
+          
           onPressed: () {},
           child: Text( "Login", style: TextStyle(fontSize: 20,color: const Color.fromARGB(255, 16, 111, 190) ,),  ),
           style: ElevatedButton.styleFrom(

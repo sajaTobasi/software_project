@@ -37,7 +37,7 @@ class SignUpPage extends StatelessWidget {
           decoration: InputDecoration(
             hintText: "Username",
             fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
-            filled: true,
+            //filled: true,
             prefixIcon: Icon(Icons.person),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(18),
@@ -51,7 +51,7 @@ class SignUpPage extends StatelessWidget {
           decoration: InputDecoration(
             hintText: "Email ",
             fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
-            filled: true,
+            //filled: true,
             prefixIcon: Icon(Icons.email_outlined),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(18),
@@ -65,7 +65,7 @@ class SignUpPage extends StatelessWidget {
           decoration: InputDecoration(
             hintText: "Password",
             fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
-            filled: true,
+            //filled: true,
             prefixIcon: Icon(Icons.password_outlined),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(18),
@@ -80,7 +80,7 @@ class SignUpPage extends StatelessWidget {
           decoration: InputDecoration(
             hintText: "Config Password",
             fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
-            filled: true,
+            //filled: true,
             prefixIcon: Icon(Icons.password_outlined),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(18),
@@ -95,7 +95,7 @@ class SignUpPage extends StatelessWidget {
           decoration: InputDecoration(
             hintText: "Phone",
             fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
-            filled: true,
+           // filled: true,
             prefixIcon: Icon(Icons.phone),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(18),

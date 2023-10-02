@@ -10,7 +10,7 @@ class FirstPage extends StatelessWidget {
           backgroundColor:Colors.white,
         
        
-      body: Image(image: AssetImage('lib/images/1.png')),
+      body: Image(image: AssetImage('lib/images/1.png') ,height: 5000,)
     
     
     
