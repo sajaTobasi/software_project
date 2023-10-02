@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/loginpage.dart';
+import 'package:flutter_application/singup.dart';
+import 'package:flutter_application/firstpage.dart';
+
 void main() {
   runApp(const MyApp());
 }

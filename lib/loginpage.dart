@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -24,8 +26,9 @@ class LoginPage extends StatelessWidget {
   _header(context) {
     return Column(
       children: [
-        Text("Weeding Planner",style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold ,color: Color=),),
-  //      Text("Enter your credential to login"),
+        Text("Weeding Planner",style: TextStyle(
+          fontSize: 40, 
+          fontWeight: FontWeight.bold , color: const Color.fromARGB(255, 16, 111, 190) , ) )
       ],
     );
   }
@@ -41,9 +44,13 @@ class LoginPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(18),
                   borderSide: BorderSide.none),
               fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
-              filled: true,
-              prefixIcon: Icon(Icons.person)),
+             // filled: true,
+              prefixIcon: Icon(Icons.person),
+             
+              ),
+             // validator:(value){if(value !.is)}
         ),
+          
         SizedBox(height: 10),
         TextField(
           decoration: InputDecoration(
@@ -52,15 +59,15 @@ class LoginPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(18),
                 borderSide: BorderSide.none),
             fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
-            filled: true,
-            prefixIcon: Icon(Icons.person),
+            //filled: true,
+            prefixIcon: Icon(Icons.password),
           ),
           obscureText: true,
         ),
         SizedBox(height: 10),
         ElevatedButton(
           onPressed: () {},
-          child: Text( "Login", style: TextStyle(fontSize: 20),  ),
+          child: Text( "Login", style: TextStyle(fontSize: 20,color: const Color.fromARGB(255, 16, 111, 190) ,),  ),
           style: ElevatedButton.styleFrom(
             shape: StadiumBorder(),
             padding: EdgeInsets.symmetric(vertical: 16),
@@ -71,7 +78,7 @@ class LoginPage extends StatelessWidget {
   }
 
   _forgotPassword(context) {
-    return TextButton(onPressed: () {}, child: Text("Forgot password?"));
+    return TextButton(onPressed: () {}, child: Text("Forgot password?",style: TextStyle(color: const Color.fromARGB(255, 16, 111, 190) ,),));
   }
 
   _signup(context) {
@@ -79,8 +86,10 @@ class LoginPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("Dont have an account? "),
-        TextButton(onPressed: () {}, child: Text("Sign Up"))
+        TextButton(onPressed: () {}, child: Text("Sign Up",style: TextStyle(color: const Color.fromARGB(255, 16, 111, 190)),))
+     
       ],
     );
   }
+
 }
