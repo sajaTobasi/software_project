@@ -1,7 +1,6 @@
-
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter_application/notes.dart';
+import 'package:flutter_application/note/notes.dart';
 //import 'package:notes_app/notes.dart';
 //import 'package:flutter_application/notes.dart';
 
@@ -10,7 +9,8 @@ class NotesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("My Notes of wedding"),
+        title: const Text("Notes of wedding", style: TextStyle(fontSize: 20,color: Color.fromARGB(255, 255, 255, 255) ,
+        fontWeight: FontWeight.bold )),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 16, 111, 190),
       ),

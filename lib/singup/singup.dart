@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application/login/loginpage.dart';
+import 'package:flutter_application/user.dart';
 class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -109,7 +110,14 @@ class SignUpPage extends StatelessWidget {
           height: 10,
         ),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return User_Page();
+                  },
+                ),
+              );},
           child: Text(
             "Sign Up", style: TextStyle(fontSize: 20,color: const Color.fromARGB(255, 16, 111, 190)), ),
           style: ElevatedButton.styleFrom(shape: StadiumBorder(),
@@ -125,7 +133,14 @@ class SignUpPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("Already have an account?"),
-        TextButton(onPressed: () {}, child: Text("Login",style: TextStyle(color: const Color.fromARGB(255, 16, 111, 190)),))
+        TextButton(onPressed: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return LoginPage();
+                  },
+                ),
+              );}, child: Text("Login",style: TextStyle(color: const Color.fromARGB(255, 16, 111, 190)),))
       ],
     );
   }
