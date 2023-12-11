@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/appbar__/cart_shopping.dart';
 import 'package:flutter_application/appbar__/profile.dart';
+import 'package:flutter_application/appbar__/cartProvider.dart';
+//import 'package:provider/provider.dart';
+//import 'package:flutter_application/testh/simple_appbar_page.dart';
 class Servies_itemPage extends StatelessWidget {
    final  flower Flower; 
  const Servies_itemPage({super.key,required this.Flower});
@@ -7,6 +11,7 @@ class Servies_itemPage extends StatelessWidget {
         
   @override
   Widget build(BuildContext context) {
+  //  final provider= CartProvider.of(context);
        return Scaffold(
                 
                 appBar: AppBar(
@@ -95,8 +100,13 @@ class Servies_itemPage extends StatelessWidget {
                              ),
                             const SizedBox(width: 70),
                              ElevatedButton.icon(
-                              onPressed: (){}, 
-                              icon: const Icon(Icons.send ,color: Colors.blueGrey,), label: const Text("Add TO Cart",style:TextStyle(color: Colors.blueGrey) ,),
+                              onPressed: (){
+                                
+                             
+
+                              }, 
+                              icon: const Icon(Icons.send ,color: Colors.blueGrey,),
+                               label: const Text("Add TO Cart",style:TextStyle(color: Colors.blueGrey) ,),
                               
                               
                               )
@@ -113,3 +123,7 @@ class Servies_itemPage extends StatelessWidget {
 
   }
 }
+ /*provider.toggleProduct(Flower);
+                               Navigator.push(context, 
+                               MaterialPageRoute(builder: (context)=> cart_page()
+                               ));*/

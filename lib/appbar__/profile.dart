@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/appbar__/favoret.dart';
+import 'package:flutter_application/appbar__/favoret_screen.dart';
 import 'package:flutter_application/appbar__/profile_item.dart';
-//import 'package:provider/provider.dart';
+import 'package:flutter_application/appbar__/favoret.dart';
+import 'package:provider/provider.dart';
 //import 'package:get/get.dart';
 
 class profile_page extends StatefulWidget {
@@ -397,7 +398,7 @@ _buildAllcard()=>GridView.builder(
 
  }
       class flowerCard extends StatefulWidget{
-        final  flower Flower;
+       final  flower Flower;
           
        const flowerCard ({super.key,required this.Flower});
          @override
@@ -406,7 +407,9 @@ _buildAllcard()=>GridView.builder(
          class _flowerCardState extends State<flowerCard>{
                @override
                Widget build(BuildContext context) {
-                final Provider = FavoriteProvider.of(context);
+
+               //final provider = FavoriteProvider.of(context);
+
                 return Container(
                   width: MediaQuery.of(context).size.width/2,
                   decoration: BoxDecoration(
@@ -417,13 +420,14 @@ _buildAllcard()=>GridView.builder(
                            children: [
                             Row(
                               children: [
-                                GestureDetector(
-                                  onTap: ()=>Provider.toggleFavorite(widget.Flower),
-                                child:Icon(
-                                  Provider.isExist(widget.Flower)
-                                  ?Icons.favorite
-                                  :Icons.favorite_border_outlined,
-                                color:Colors.red ),)
+                               // GestureDetector(
+                                //  onTap: ()=>provider.toggleFavorite(widget.Flower),
+                                //child:Icon(
+                                  //provider.isExist(widget.Flower)
+                                  //?Icons.favorite
+                                 // :Icons.favorite_border_outlined,
+                              //  color:Colors.red ),
+                              // )
                               ],
                             ),
                             SizedBox(height: 130,width: 130,child: Image.asset(widget.Flower.image,fit: BoxFit.cover,))

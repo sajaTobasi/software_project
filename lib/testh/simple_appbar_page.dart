@@ -9,9 +9,11 @@ import 'package:flutter_application/appbar__/Home.dart';
 import 'package:flutter_application/appbar__/profile.dart';
 import 'package:flutter_application/appbar__/favoret.dart';
 import 'package:flutter_application/appbar__/favoret_screen.dart';
+import 'package:flutter_application/appbar__/favoret.dart';
 import 'package:flutter_application/appbar__/cart_shopping.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_application/testh/transparent_appbar_page.dart';
+ import 'package:flutter_application/appbar__/cartProvider.dart';
 //import 'package:flutter_application/testh/menu.dart';
 import 'package:flutter_application/welcome/welcome_screen.dart';
 class SimpleAppBarPage extends StatefulWidget {
@@ -32,7 +34,8 @@ class _SimpleAppBarPageState extends State<SimpleAppBarPage> {
   @override
   Widget build(BuildContext context) => MultiProvider(
        providers: [
-        ChangeNotifierProvider(create:(_)=>FavoriteProvider()),
+      //  ChangeNotifierProvider(create:(_)=>FavoriteProvider()),
+        ChangeNotifierProvider(create:(_)=>CartProvider()),
        ],
         child: Scaffold(
          // drawer: const NavigationDrawer(),
@@ -61,14 +64,11 @@ class _SimpleAppBarPageState extends State<SimpleAppBarPage> {
             actions: [
               IconButton(
                 icon: Icon(Icons.add_shopping_cart),
-                onPressed: () {Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return cart_page();
-                  },
-                ),
-              );},
+                onPressed: ()=>Navigator.push(
+                  context,
+                   MaterialPageRoute(builder: (context)=> cart_Page()),
+                   )
+              //cart_page();
               ),
               IconButton(
                 icon: Icon(Icons.search),
@@ -159,8 +159,9 @@ body:IndexedStack(
             ],
          ),*/
         // drawer: const NavigationDrawer()
-  ));
-        
+  )
+  );
+        ///////////////////////////////////////////////////////////////////////////////////////////
     //  );
 
   Widget buildPage(String text) => Center(
@@ -258,16 +259,20 @@ class NavigationDrawer extends StatelessWidget {
       ListTile(
         leading: const Icon(Icons.favorite),
         title: const Text('Favorite'),
-        onTap: (){Navigator.push(
+        onTap: (){},
+       // =>Navigator.push(
+            //      context,
+                 //  MaterialPageRoute(builder: (context)=> favoriteScreen()),
+                   ),/*{Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return favoriteScreen();
+                    return //favoriteScreen();
                   },
                 ),
-              );},
+              );},*/
 
-      ),
+     // ),
         ListTile(
         leading: const Icon(Icons.notifications),
         title: const Text('Notifications'),

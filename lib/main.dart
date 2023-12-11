@@ -12,6 +12,8 @@ import 'package:flutter_application/testh/simple_appbar_page.dart';
 import 'package:flutter_application/testh/transparent_appbar_page.dart';
 import 'package:flutter_application/testh/menu.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_application/appbar__/bag.dart';
+import 'package:flutter_application/appbar__/favoret_screen.dart';
 //import 'dart:math';
 void main() {
   runApp(const MyApp());
@@ -25,7 +27,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(useMaterial3: true),
-      home:WelcomeScreen(),
+      home://favoriteScreen(),
+      WelcomeScreen(),
     );
   }
 }
